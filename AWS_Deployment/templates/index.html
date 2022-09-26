@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+</head>
+
+<body>
+ <div class="login">
+	<h1>Classify into Benign and Malign</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+    	<label for="Server_TCP_Flags">Server TCP Flags : </label><input type="number" name="Server_TCP_Flags" placeholder="Count of Flags" required="required" /><br>
+      <label for="DNS_TTL_Answer">DNS TTL Answer : </label><input type="number" name="DNS_TTL_Answer" placeholder="Total Data Transfer" required="required" /><br>
+      <label for="IN_PKTS">IN PKTS : </label><input type="number" name="IN_PKTS" placeholder="Count of input packets" required="required" /><br>
+      <label for="TCP_WIN_MAX_OUT">TCP WIN MAX OUT : </label><input type="number" name="TCP_WIN_MAX_OUT" placeholder="Size of TCP outflow" required="required" /><br>
+      <label for="L4_DST_PORT">L4 DST PORT : </label><input type="number" name="L4_DST_PORT" placeholder="Destination Port Number" required="required" /><br>
+      <label for="IN_BYTES">IN BYTES : </label><input type="number" name="IN_BYTES" placeholder="Count of Input Data Size" required="required" /><br>
+      <label for="NUM_PKTS_128_TO_256_BYTES">NUM PKTS 128 TO 256 BYTES : </label><input type="number" name="NUM_PKTS_128_TO_256_BYTES" placeholder="Count" required="required" /><br>
+      <label for="NUM_PKTS_UP_TO_128_BYTES">NUM PKTS UP TO 128 BYTES : </label><input type="number" name="NUM_PKTS_UP_TO_128_BYTES" placeholder="Count" required="required" /><br>
+      <label for="TCP_WIN_MAX_IN">TCP WIN MAX IN : </label><input type="number" name="TCP_WIN_MAX_IN" placeholder="Size of TCP inflow" required="required" /><br>
+      <label for="PROTOCOL">PROTOCOL : </label><input type="number" name="PROTOCOL" placeholder="Protocol Number" required="required" /><br>
+      <label for="L4_SRC_PORT">L4 SRC PORT : </label><input type="number" name="L4_SRC_PORT" placeholder="Source Port Number" required="required" /><br>
+      <label for="SRC_TO_DST_AVG_THROUGHPUT">SRC TO DST AVG THROUGHPUT : </label><input type="number" name="SRC_TO_DST_AVG_THROUGHPUT" placeholder="Average input flow" required="required" /><br>
+      <label for="DST_TO_SRC_AVG_THROUGHPUT">DST TO SRC AVG THROUGHPUT : </label><input type="number" name="DST_TO_SRC_AVG_THROUGHPUT" placeholder="Average output flow" required="required" /><br>
+      <label for="OUT_BYTES">OUT BYTES : </label><input type="number" name="OUT_BYTES" placeholder="Count of Output Data Size" required="required" /><br>
+      <label for="SRC_TO_DST_SECOND_BYTES">SRC TO DST SECOND BYTES : </label><input type="number" name="SRC_TO_DST_SECOND_BYTES" placeholder="Size of second packets" required="required" /><br>
+      <label for="MAX_IP_PKT_LEN">MAX IP PKT LEN : </label><input type="number" name="MAX_IP_PKT_LEN" placeholder="Input Packet length" required="required" /><br>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Classify</button>
+    </form>
+   <br>
+   <br>
+   {{ Classification_text }}
+ </div>
+</body>
+
+</html>
