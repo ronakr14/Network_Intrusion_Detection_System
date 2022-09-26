@@ -10,6 +10,7 @@ WORKDIR /app
 # Copy the dependencies file to the working directory
 COPY requirements.txt .
 COPY Random_Forest_Classifier_FS_DTC.pkl .
+COPY templates/ ./templates/
 
 # Install any dependencies
 RUN pip3 install -r requirements.txt
