@@ -1,0 +1,5 @@
+https://www.kaggle.com/datasets/aryashah2k/nfuqnidsv2-network-intrusion-detection-dataset
+
+https://staff.itee.uq.edu.au/marius/NIDS_datasets/#RA5
+
+https://hub.docker.com/r/rastar14/nids
